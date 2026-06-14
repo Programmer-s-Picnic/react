@@ -9,7 +9,7 @@ function App() {
         <p className="eyebrow">React on GitHub Pages</p>
         <h1>Hello World</h1>
         <p className="lead">
-          This React app is ready for deployment on your custom domain:
+          Learn React with Champak:
         </p>
         <a className="domain" href="https://react.learnwithchampak.live/">
           react.learnwithchampak.live
