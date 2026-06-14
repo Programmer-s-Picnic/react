@@ -1,41 +1,35 @@
-# React Hello World
+# React Calculator Components
 
-A simple Vite + React Hello World app for GitHub Pages.
+This Vite React project contains separate calculator components that use three number inputs and demonstrate:
 
-Custom domain:
+- buttons
+- radio buttons
+- select dropdown
+- checkboxes
 
-```text
-react.learnwithchampak.live
-```
+Each component performs addition, subtraction, multiplication, and division.
 
-## Local run
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
-
-```bash
-npm run build
-npm run preview
-```
+Open the local URL shown by Vite, usually `http://localhost:5173/`.
 
 ## Deploy
 
-Push to the `main` branch. GitHub Actions will build the app and deploy the `dist` folder to GitHub Pages.
+The project includes `.github/workflows/deploy.yml`, so GitHub Actions will build and deploy the app to GitHub Pages when you push to `main`.
 
-In GitHub repository settings, use:
+The custom domain file is:
 
 ```text
-Settings → Pages → Source → GitHub Actions
+public/CNAME
 ```
 
-DNS record:
+with:
 
 ```text
-Type: CNAME
-Name: react
-Value: programmer-s-picnic.github.io
+react.learnwithchampak.live
 ```
