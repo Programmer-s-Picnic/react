@@ -239,3 +239,132 @@ select {
     width: 100%;
   }
 }
+
+.site-nav {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #d5e7f7;
+  border-radius: 22px;
+  box-shadow: 0 14px 32px rgba(11, 103, 178, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+  padding: 14px;
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+}
+
+.brand-block {
+  align-items: center;
+  color: #073b6d;
+  display: flex;
+  gap: 12px;
+}
+
+.brand-block small {
+  color: #5d6b82;
+  display: block;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.brand-mark {
+  background: #0b67b2;
+  border-radius: 14px;
+  color: #ffffff;
+  display: grid;
+  font-weight: 1000;
+  height: 44px;
+  place-items: center;
+  width: 44px;
+}
+
+.nav-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-actions button {
+  background: #eaf5ff;
+  color: #073b6d;
+  box-shadow: none;
+}
+
+.nav-actions button:hover,
+.nav-actions .active-nav {
+  background: #0b67b2;
+  color: #ffffff;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.ghost-button {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 12px;
+  color: #ffffff;
+  display: inline-flex;
+  font-weight: 900;
+  justify-content: center;
+  padding: 12px 18px;
+  text-decoration: none;
+}
+
+.ghost-button:hover {
+  background: rgba(255, 255, 255, 0.22);
+  text-decoration: none;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature-grid article {
+  background: #fbfdff;
+  border: 1px solid #d5e7f7;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.feature-grid h3 {
+  color: #073b6d;
+  margin: 0 0 8px;
+}
+
+.feature-grid p,
+.lesson-note p {
+  color: #5d6b82;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.calculator-hero {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .site-nav {
+    align-items: stretch;
+    flex-direction: column;
+    position: static;
+  }
+
+  .nav-actions button {
+    flex: 1;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}

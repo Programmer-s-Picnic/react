@@ -1,40 +1,54 @@
-import ButtonCalculator from './components/ButtonCalculator.jsx'
-import RadioCalculator from './components/RadioCalculator.jsx'
-import SelectCalculator from './components/SelectCalculator.jsx'
-import CheckboxCalculator from './components/CheckboxCalculator.jsx'
+import { useState } from 'react'
+import HomePage from './pages/HomePage.jsx'
+import CalculatorPage from './pages/CalculatorPage.jsx'
 import './App.css'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home')
+
+  function openHomePage() {
+    setCurrentPage('home')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  function openCalculatorPage() {
+    setCurrentPage('calculators')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <main className="app-shell">
-      <header className="hero-panel">
-        <p className="eyebrow">React Components Practice</p>
-        <h1>Three Number Calculator Components</h1>
-        <p className="hero-text">
-          This app uses separate React components for buttons, radio buttons,
-          a select dropdown, and checkboxes. Each component takes three inputs
-          and performs addition, subtraction, multiplication, and division.
-        </p>
-      </header>
-
-      <section className="concept-panel">
-        <h2>What this project teaches</h2>
-        <div className="concept-grid">
-          <span>useState</span>
-          <span>controlled inputs</span>
-          <span>onChange</span>
-          <span>onClick</span>
-          <span>radio buttons</span>
-          <span>select dropdown</span>
-          <span>checkbox arrays</span>
-          <span>separate components</span>
+      <nav className="site-nav" aria-label="Main navigation">
+        <div className="brand-block">
+          <span className="brand-mark">PP</span>
+          <span>
+            <strong>Programmer&apos;s Picnic</strong>
+            <small>React Components Lab</small>
+          </span>
         </div>
-      </section>
 
-      <ButtonCalculator />
-      <RadioCalculator />
-      <SelectCalculator />
-      <CheckboxCalculator />
+        <div className="nav-actions">
+          <button
+            className={currentPage === 'home' ? 'active-nav' : ''}
+            onClick={openHomePage}
+          >
+            Home
+          </button>
+
+          <button
+            className={currentPage === 'calculators' ? 'active-nav' : ''}
+            onClick={openCalculatorPage}
+          >
+            Calculators
+          </button>
+        </div>
+      </nav>
+
+      {currentPage === 'home' ? (
+        <HomePage onOpenCalculators={openCalculatorPage} />
+      ) : (
+        <CalculatorPage />
+      )}
     </main>
   )
 }
