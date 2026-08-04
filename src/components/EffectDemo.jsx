@@ -1,7 +1,11 @@
 import { useState } from "react";
-
-export function Counter() {
+import { useEffect } from "react";
+export function EffectDemo() {
+  
   let [x, setX] = useState(0);
+  useEffect(() => {
+  document.title = `Count: ${x}`
+}, [x])
   return (
     <>
       <h1>Counter{x}</h1>
