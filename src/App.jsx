@@ -1,6 +1,6 @@
 
 
-import WeatherFetch from "./components/Weatherfetch";
+import WeatherFetch from "./components/WeatherFetch";
 
 function App() {
   return (
