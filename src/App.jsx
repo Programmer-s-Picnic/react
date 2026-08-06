@@ -1,11 +1,11 @@
 
 import { EffectDemo } from "./components/EffectDemo";
+import WeatherFetch from "./components/Weatherfetch";
 
 function App() {
   return (
     <div>
-      <h1>Hi</h1>
-     <EffectDemo></EffectDemo>
+    <WeatherFetch></WeatherFetch>
     </div>
   );
 }
