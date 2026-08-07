@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function WeatherFetch() {
-    
+    let [x ,setX]= useState("");
     
   function fetchWeather() {
     const appid = "4a1f8a61b74546825af1e0be106e797b";
@@ -13,13 +13,14 @@ function WeatherFetch() {
 
     fetch(url)
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => setX(JSON.stringify(data)))
       .catch((error) => console.log(error));
   }
 
   return (
     <div>
       <h1>Weather Fetch Example</h1>
+      <p>{x}</p>
       <button onClick={fetchWeather}>Fetch Varanasi Weather</button>
     </div>
   );
