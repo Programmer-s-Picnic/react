@@ -5,7 +5,7 @@ function WeatherFetch() {
 
   function showWeather(weatherdata) {
     let maindata=weatherdata.weather[0].main;
-    console.log(weatherdata.weather[0].main);
+    console.log(weatherdata);
     setX(maindata);
   }
   function fetchWeather() {
@@ -15,6 +15,7 @@ function WeatherFetch() {
     const url =
       `https://api.openweathermap.org/data/2.5/weather` +
       `?q=${city}&appid=${appid}&units=metric`;
+      console.log(url);
 
     fetch(url)
       .then((response) => response.json())
