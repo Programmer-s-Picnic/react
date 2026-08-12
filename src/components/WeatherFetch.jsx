@@ -1,21 +1,22 @@
 import { useState } from "react";
 
 function WeatherFetch() {
-  let [x, setX] = useState("");
+  let [questionno, setQuestionno] = useState(0);
+  let [question, setQuestion] = useState("");
+  let [a, setA] = useState("");
 
-  function showWeather(weatherdata) {
-    let maindata=weatherdata.weather[0].main;
-    console.log(weatherdata);
-    setX(maindata);
+  function showWeather(data) {
+    console.log(data);
+
+    let question = data[questionno];
+    console.log(question.question);
+    setQuestion(question.question);
+    setA(question.a);
+    setQuestionno(questionno+1);
   }
   function fetchWeather() {
-    const appid = "4a1f8a61b74546825af1e0be106e797b";
-    const city = "Varanasi";
-
-    const url =
-      `https://api.openweathermap.org/data/2.5/weather` +
-      `?q=${city}&appid=${appid}&units=metric`;
-      console.log(url);
+    const url = `https://thakuramitsingh9365-ctrl.github.io/Kbctest/package.json`;
+    console.log(url);
 
     fetch(url)
       .then((response) => response.json())
@@ -25,8 +26,12 @@ function WeatherFetch() {
 
   return (
     <div>
-      <h1>Weather Fetch Example</h1>
-      <p>main {x}</p>
+      <h1>KBC Example</h1>
+      <input id="t" type="text"></input>
+
+      <h1>{questionno+1}) {question}</h1>
+      <br></br>
+      <label>{a}<input type="radio"></input></label>
       <button onClick={fetchWeather}>Fetch Varanasi Weather</button>
     </div>
   );
