@@ -1,11 +1,10 @@
-
-
-import WeatherFetch from "./components/WeatherFetch";
+import { Counter } from "./components/Counter";
 
 function App() {
+  
   return (
     <div>
-    <WeatherFetch></WeatherFetch>
+      <Counter></Counter>
     </div>
   );
 }
