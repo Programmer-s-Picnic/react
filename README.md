@@ -1,13 +1,6 @@
-# React Calculator Components
+# FlexJobs React Demo
 
-This Vite React project contains separate calculator components that use three number inputs and demonstrate:
-
-- buttons
-- radio buttons
-- select dropdown
-- checkboxes
-
-Each component performs addition, subtraction, multiplication, and division.
+A responsive React/Vite job portal demonstration using CSS Flexbox as the main layout technique.
 
 ## Run locally
 
@@ -16,20 +9,19 @@ npm install
 npm run dev
 ```
 
-Open the local URL shown by Vite, usually `http://localhost:5173/`.
+## Build
 
-## Deploy
-
-The project includes `.github/workflows/deploy.yml`, so GitHub Actions will build and deploy the app to GitHub Pages when you push to `main`.
-
-The custom domain file is:
-
-```text
-public/CNAME
+```bash
+npm run build
 ```
 
-with:
+## Included
 
-```text
-react.learnwithchampak.live
-```
+- Responsive header/navigation
+- Job search by keyword/location
+- Flexbox category cards
+- Job filters
+- Save/favourite jobs
+- Employer call-to-action
+- Career resource cards
+- Mobile responsive layouts
